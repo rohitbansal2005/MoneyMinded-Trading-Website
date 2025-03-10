@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Admin Dashboard V.1.1</title>
+
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/Responsive Admin Dashboard V.1.1.css">
+
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav>
+        <div class="container">
+            
+            <div class="search-bar">
+                <span class="material-icons-sharp">search</span>
+                <input type="search" placeholder="Search">
+            </div>
+            <div class="profile-area">
+                <div class="theme-btn">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="profile-photo">
+                        <img src="img/i.jpeg" alt="profile1">
+                    </div>
+                    <h5> User </h5>
+                    <span class="material-icons-sharp">expand_more</span>
+                </div>
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- main -->
+
+    <main>
+
+         <!-- aside -->
+        <aside>
+            <button id="close-btn">
+                <span class="material-icons-sharp">close</span>
+            </button>
+            <div class="sidebar">
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h4>Dashboard</h4>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">currency_exchange</span>
+                    <h4>Exchange</h4>
+                </a>
+
+                  <a href="index5.html" class="btn btn-primary"><span class="material-icons-sharp">account_balance_wallet</span>
+                    <h4> WALLET </h4> </a>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">payment</span>
+                    <h4>Transactions</h4>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">pie_chart</span>
+                    <h4>Analytics</h4>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">insert_comment</span>
+                    <h4>Messages</h4>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">help_center</span>
+                    <h4>Help Center</h4>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">settings</span>
+                    <h4>Settings</h4>
+                </a>
+            </div>
+            <div class="updates">
+                <span class="material-icons-sharp">update</span>
+                <h4>Updates Available</h4>
+                <small>Security Updates</small>
+                <small>General Updates</small>
+                <a href="#">Update Now</a>
+
+            </div>
+
+        </aside>
+
+         <!-- section middle -->
+        <section class="middle">
+            <div class="header">
+                <h1>Overview</h1>
+                <input type="date">
+            </div>
+            <div>
+            <img src="tr.webp" width="10"   alt="trade">
+            </div>
+          
+               
+                       
+            <!-- monthly report -->
+            <div class="monthly-report">
+                <div class="report">
+                    <h3>Income</h3>
+                    <div>
+                        <details>
+                            <h1>$19,230</h1>
+                            <h4 class="success">+4.6%</h4>
+                        </details>
+                        <p class="text-muted">Compared to $18,384 last month</p>
+                    </div>
+                </div>
+                <div class="report">
+                    <h3>Expenses</h3>
+                    <div>
+                        <details>
+                            <h1>$9,113</h1>
+                            <h4 class="danger">-6.2%</h4>
+                        </details>
+                        <p class="text-muted">Compared to $9,715 last month</p>
+                    </div>
+                </div>
+                <div class="report">
+                    <h3>Cashback</h3>
+                    <div>
+                        <details>
+                            <h1>$4,390</h1>
+                            <h4 class="success">+2.9%</h4>
+                        </details>
+                        <p class="text-muted">Compared to $4,266 last month</p>
+                    </div>
+                </div>
+                <div class="report">
+                    <h3>Income</h3>
+                    <div>
+                        <details>
+                            <h1>$86,374</h1>
+                            <h4 class="danger">-5.2%</h4>
+                        </details>
+                        <p class="text-muted">Compared to $91,111 last month</p>
+                    </div>
+                </div>
+            </div>
+             
+                   
+             <!-- canvas -->
+             <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Chart with Buy/Sell</title>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .container { max-width: 1000px; margin: auto; }
+        .tradingview-widget-container { height: 610px; }
+        .btn-container { margin-top: 10px; }
+        button { padding: 10px 20px; margin: 5px; font-size: 16px; cursor: pointer; }
+        .buy { background-color: green; color: white; }
+        .sell { background-color: red; color: white; }
+        .log { margin-top: 20px; text-align: left; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tradingview-widget-container">
+            <div id="tradingview_chart"></div>
+        </div>
+        <div class="btn-container">
+            <button class="buy" onclick="placeOrder('BUY')">Buy</button>
+            <button class="sell" onclick="placeOrder('SELL')">Sell</button>
+        </div>
+        <div class="log">
+            <h3>Trade Log:</h3>
+            <ul id="trade-log"></ul>
+        </div>
+    </div>
+
+    <script>
+        new TradingView.widget({
+            "width": "100%",
+            "height": "610",
+            "symbol": "NASDAQ:AAPL",
+            "interval": "D",
+            "timezone": "Etc/UTC",
+            "theme": "dark",
+            "style": "1",
+            "locale": "en",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "withdateranges": true,
+            "hide_side_toolbar": false,
+            "allow_symbol_change": true,
+            "details": true,
+            "hotlist": true,
+            "calendar": true,
+            "container_id": "tradingview_chart"
+        });
+
+        function placeOrder(type) {
+            let tradeLog = document.getElementById("trade-log");
+            let time = new Date().toLocaleTimeString();
+            let listItem = document.createElement("li");
+            listItem.textContent = `${time} - ${type} Order Placed`;
+            tradeLog.appendChild(listItem);
+            saveTrade(type, time);
+        }
+
+        function saveTrade(type, time) {
+            let trades = JSON.parse(localStorage.getItem("trades")) || [];
+            trades.push({ type, time });
+            localStorage.setItem("trades", JSON.stringify(trades));
+        }
+                </script>
+            </div>
+
+        </section>
+
+         <!-- section right -->
+         <section class="right">
+             <!-- investments -->
+            <div class="investments">
+                <div class="header">
+                    <h2>Investments</h2>
+                    <a href="#">More <span class="material-icons-sharp">chevron_right</span></a>
+                </div>
+                 <!-- investment var -->
+                <div class="investment">
+                    <img src="img/tesla.png" alt="inv2">
+                    <h4>Tesla</h4>
+                    <div class="date-time">
+                        <p>7 Fev, 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small class="text-muted">Bonds</small>
+                    </div>
+                    <div class="amount">
+                        <h4>$262.44</h4>
+                        <small class="success">+1.05%</small>
+                    </div>
+                </div>
+                <div class="investment">
+                    <img src="img/l.png" alt="inv4">
+                    <h4>Google</h4>
+                    <div class="date-time">
+                        <p>7 Fev, 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small class="text-muted">Bonds</small>
+                    </div>
+                    <div class="amount">
+                        <h4>$175.75</h4>
+                        <small class="danger">-0.22%</small>
+                    </div>
+                </div>
+                <div class="investment">
+                    <img src="img/s.png" alt="inv1">
+                    <h4>Microsoft</h4>
+                    <div class="date-time">
+                        <p>7 Fev, 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small class="text-muted">Bonds</small>
+                    </div>
+                    <div class="amount">
+                        <h4>$393.31</h4>
+                        <small class="danger">-1.39%</small>
+                    </div>
+                </div>
+                <div class="investment">
+                    <img src="img/m.png" alt="inv3">
+                    <h4>Meta</h4>
+                    <div class="date-time">
+                        <p>7 Fev, 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small class="text-muted">Bonds</small>
+                    </div>
+                    <div class="amount">
+                        <h4>$102,51</h4>
+                        <small class="danger">-0.30%</small>
+                    </div>
+                </div>
+                <!-- Investment: Amazon -->
+                <div class="investment">
+                    <img src="img/am.png" alt="Amazon">
+                    <h4>Amazon</h4>
+                    <div class="date-time">
+                        <p>7 Fev, 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small class="text-muted">Bonds</small>
+                    </div>
+                    <div class="amount">
+                        <h4>$262.44</h4>
+                        <small class="success">+1.05%</small>
+                    </div>
+                </div>
+            
+                <!-- Investment: Apple -->
+                <div class="investment">
+                    <img src="img/" alt="Apple">
+                    <h4>Apple</h4>
+                    <div class="date-time">
+                        <p>7 Fev, 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small class="text-muted">Bonds</small>
+                    </div>
+                    <div class="amount">
+                        <h4>$175.75</h4>
+                        <small class="danger">-0.22%</small>
+                    </div>
+                </div>
+            
+                <!-- Investment: Microsoft -->
+                <div class="investment">
+                    <img src="img/s.png" alt="inv1">
+                    <h4>Microsoft</h4>
+                    <div class="date-time">
+                        <p>7 Fev, 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small class="text-muted">Bonds</small>
+                    </div>
+                    <div class="amount">
+                        <h4>$393.31</h4>
+                        <small class="danger">-1.39%</small>
+                    </div>
+                </div>
+            
+                <!-- Investment: Meta -->
+                <div class="investment">
+                    <img src="img/m.png" alt="inv3">
+                    <h4>Meta</h4>
+                    <div class="date-time">
+                        <p>7 Fev, 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small class="text-muted">Bonds</small>
+                    </div>
+                    <div class="amount">
+                        <h4>$102,51</h4>
+                        <small class="danger">-0.30%</small>
+                    </div>
+                </div>
+
+                <div class="investment">
+                    <img src="img/tesla.png" alt="inv2">
+                    <h4>Tesla</h4>
+                    <div class="date-time">
+                        <p>7 Fev, 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small class="text-muted">Bonds</small>
+                    </div>
+                    <div class="amount">
+                        <h4>$262.44</h4>
+                        <small class="success">+1.05%</small>
+                    </div>
+                </div>
+                <div class="investment">
+                    <img src="img/l.png" alt="inv4">
+                    <h4>Google</h4>
+                    <div class="date-time">
+                        <p>7 Fev, 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small class="text-muted">Bonds</small>
+                    </div>
+                    <div class="amount">
+                        <h4>$175.75</h4>
+                        <small class="danger">-0.22%</small>
+                    </div>
+                </div>
+                <div class="investment">
+                    <img src="img/s.png" alt="inv1">
+                    <h4>Microsoft</h4>
+                    <div class="date-time">
+                        <p>7 Fev, 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small class="text-muted">Bonds</small>
+                    </div>
+                    <div class="amount">
+                        <h4>$393.31</h4>
+                        <small class="danger">-1.39%</small>
+                    </div>
+                </div>
+                <div class="investment">
+                    <img src="img/m.png" alt="inv3">
+                    <h4>Meta</h4>
+                    <div class="date-time">
+                        <p>7 Fev, 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small class="text-muted">Bonds</small>
+                    </div>
+                    <div class="amount">
+                        <h4>$102,51</h4>
+                        <small class="danger">-0.30%</small>
+                    </div>
+                </div>
+                <!-- Investment: Amazon -->
+                <div class="investment">
+                    <img src="img/amazon.png" alt="amazon">
+                    <h4>Amazon</h4>
+                    <div class="date-time">
+                        <p>7 Fev, 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small class="text-muted">Bonds</small>
+                    </div>
+                    <div class="amount">
+                        <h4>$262.44</h4>
+                        <small class="success">+1.05%</small>
+                    </div>
+                </div>
+            
+                <!-- Investment: Apple -->
+                <div class="investment">
+                    <img src="img/apple.png" alt="apple">
+                    <h4>Apple</h4>
+                    <div class="date-time">
+                        <p>7 Fev, 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small class="text-muted">Bonds</small>
+                    </div>
+                    <div class="amount">
+                        <h4>$175.75</h4>
+                        <small class="danger">-0.22%</small>
+                    </div>
+                </div>
+            
+                <!-- Investment: Microsoft -->
+                <div class="investment">
+                    <img src="img/s.png" alt="inv1">
+                    <h4>Microsoft</h4>
+                    <div class="date-time">
+                        <p>7 Fev, 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small class="text-muted">Bonds</small>
+                    </div>
+                    <div class="amount">
+                        <h4>$393.31</h4>
+                        <small class="danger">-1.39%</small>
+                    </div>
+                </div>
+            
+                <!-- Investment: Meta -->
+                <div class="investment">
+                    <img src="img/m.png" alt="inv3">
+                    <h4>Meta</h4>
+                    <div class="date-time">
+                        <p>7 Fev, 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small class="text-muted">Bonds</small>
+                    </div>
+                    <div class="amount">
+                        <h4>$102,51</h4>
+                        <small class="danger">-0.30%</small>
+
+                        <h1>Welcome to Trading Page</h1>
+
+                        <a href="trade.php">Go to Trade Page</a>  <!-- Trade Page ka link -->
+                        
+                    </div>
+                </div>
+
+            </div>      
+                
+        </div>
+            
+
+            </div>
+         </section>
+    </main>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.0/chart.min.js" integrity="sha512-R60W3LgKdvvfwbGbqKusRu/434Snuvr9/Flhtoq9cj1LQ9P4HFKParULqOCAisHk/J4zyaEWWjiWIMuP13vXEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="js/Responsive Admin Dashboard V.1.1.js"></script>
+</body> 
+</html>
